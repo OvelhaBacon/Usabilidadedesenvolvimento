@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://bjwg3cqv3u3km"]
+
+[ext_resource type="Texture2D" uid="uid://ktyuqhq24hwn" path="res://assets/background.png" id="1_m8w5a"]
+[ext_resource type="PackedScene" uid="uid://5nqyskrm6ekm" path="res://BOX.tscn" id="2_h452g"]
+[ext_resource type="PackedScene" uid="uid://do8l07uxrmgtj" path="res://player.tscn" id="3_m62nb"]
+[ext_resource type="PackedScene" uid="uid://cebqlwhgult1i" path="res://ground.tscn" id="4_uu63g"]
+
+[node name="world" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -1.0
+offset_top = -4.0
+offset_right = 1023.0
+offset_bottom = 596.0
+texture = ExtResource("1_m8w5a")
+
+[node name="player" parent="." instance=ExtResource("3_m62nb")]
+position = Vector2(121, 406)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("2_h452g")]
+position = Vector2(576, 366)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("2_h452g")]
+position = Vector2(650, 260)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("2_h452g")]
+position = Vector2(528, 466)
+
+[node name="ground" parent="." instance=ExtResource("4_uu63g")]
+position = Vector2(510, 565)
